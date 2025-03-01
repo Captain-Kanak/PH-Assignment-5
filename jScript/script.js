@@ -23,7 +23,7 @@ document.querySelectorAll(".complete-btn").forEach((btn) => {
       completedTaskElement.innerText = completedTask;
     }
     if (remainingTask === 0) {
-      alert("All");
+      alert("Congrats!!! You have completed all the current task");
     }
   });
 });

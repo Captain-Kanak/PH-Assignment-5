@@ -37,7 +37,7 @@
                     <img src="./assets/checkbox.png" alt="">
                     <h2 id="completed-task" class="text-3xl font-bold">23</h2>
                 </div>
-                <div>
+                <div id="changeColorButton" class="cursor-pointer">
                     <img src="./assets/theme-btn.png" alt="">
                 </div>
             </div>
@@ -226,6 +226,16 @@
         }
 
         formatDate();
+
+        // Change background color
+        document.getElementById('changeColorButton').addEventListener('click', function () {
+            // Array of colors to choose from
+            const colors = ['#cbf705', '#f705f3', '#05f7ef', '#6C7FFA', '#9BA8F8', '#42f705', '#3752FD'];
+            // Randomly select a color
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            // Change the background color
+            document.body.style.backgroundColor = randomColor;
+        });
     </script>
 </body>
 
