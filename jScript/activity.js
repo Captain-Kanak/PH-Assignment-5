@@ -111,3 +111,9 @@ document
 
     parentElement.appendChild(newParagraph);
   });
+
+document
+  .getElementById("clear-history-btn")
+  .addEventListener("click", function () {
+    document.getElementById("activity-log").innerHTML = "";
+  });
