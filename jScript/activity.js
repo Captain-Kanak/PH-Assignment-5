@@ -1,117 +1,44 @@
 document
-  .getElementById("complete-btn-1")
-  .addEventListener("click", function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleTimeString();
+  .getElementById("complete-btn-all")
+  .addEventListener("click", function (event) {
+    // Check if the clicked element is a button and get the button's id
+    if (event.target && event.target.tagName === "BUTTON") {
+      const buttonId = event.target.id;
+      let taskName = "";
 
-    const newParagraph = document.createElement("p");
-    newParagraph.innerText =
-      "You have completed the task Fix Mobile Button Issue at " + formattedDate;
+      // Map each button id to its corresponding task title
+      if (buttonId === "complete-btn-1") {
+        taskName = document.getElementById("tittle-1").innerText;
+      } else if (buttonId === "complete-btn-2") {
+        taskName = document.getElementById("tittle-2").innerText;
+      } else if (buttonId === "complete-btn-3") {
+        taskName = document.getElementById("tittle-3").innerText;
+      } else if (buttonId === "complete-btn-4") {
+        taskName = document.getElementById("tittle-4").innerText;
+      } else if (buttonId === "complete-btn-5") {
+        taskName = document.getElementById("tittle-5").innerText;
+      } else if (buttonId === "complete-btn-6") {
+        taskName = document.getElementById("tittle-6").innerText;
+      }
 
-    newParagraph.style.backgroundColor = "#F4F7FF";
-    newParagraph.style.padding = "12px";
-    newParagraph.style.borderRadius = "16px";
+      // Add task to the log
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleTimeString();
 
-    const parentElement = document.getElementById("activity-log");
+      const newParagraph = document.createElement("p");
+      newParagraph.innerText =
+        "You have completed the task " + taskName + " at " + formattedDate;
 
-    parentElement.appendChild(newParagraph);
+      newParagraph.style.backgroundColor = "#F4F7FF";
+      newParagraph.style.padding = "12px";
+      newParagraph.style.borderRadius = "16px";
+
+      const parentElement = document.getElementById("activity-log");
+      parentElement.appendChild(newParagraph);
+    }
   });
 
-document
-  .getElementById("complete-btn-2")
-  .addEventListener("click", function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleTimeString();
-
-    const newParagraph = document.createElement("p");
-    newParagraph.innerText =
-      "You have completed the task Add Dark Mode at " + formattedDate;
-
-    newParagraph.style.backgroundColor = "#F4F7FF";
-    newParagraph.style.padding = "12px";
-    newParagraph.style.borderRadius = "16px";
-
-    const parentElement = document.getElementById("activity-log");
-
-    parentElement.appendChild(newParagraph);
-  });
-
-document
-  .getElementById("complete-btn-3")
-  .addEventListener("click", function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleTimeString();
-
-    const newParagraph = document.createElement("p");
-    newParagraph.innerText =
-      "You have completed the task Optimize Home page at " + formattedDate;
-
-    newParagraph.style.backgroundColor = "#F4F7FF";
-    newParagraph.style.padding = "12px";
-    newParagraph.style.borderRadius = "16px";
-
-    const parentElement = document.getElementById("activity-log");
-
-    parentElement.appendChild(newParagraph);
-  });
-
-document
-  .getElementById("complete-btn-4")
-  .addEventListener("click", function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleTimeString();
-
-    const newParagraph = document.createElement("p");
-    newParagraph.innerText =
-      "You have completed the task Add new emoji 🤲 at " + formattedDate;
-
-    newParagraph.style.backgroundColor = "#F4F7FF";
-    newParagraph.style.padding = "12px";
-    newParagraph.style.borderRadius = "16px";
-
-    const parentElement = document.getElementById("activity-log");
-
-    parentElement.appendChild(newParagraph);
-  });
-
-document
-  .getElementById("complete-btn-5")
-  .addEventListener("click", function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleTimeString();
-
-    const newParagraph = document.createElement("p");
-    newParagraph.innerText =
-      "You have completed the task Integrate OpenAI API at " + formattedDate;
-
-    newParagraph.style.backgroundColor = "#F4F7FF";
-    newParagraph.style.padding = "12px";
-    newParagraph.style.borderRadius = "16px";
-
-    const parentElement = document.getElementById("activity-log");
-
-    parentElement.appendChild(newParagraph);
-  });
-
-document
-  .getElementById("complete-btn-6")
-  .addEventListener("click", function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleTimeString();
-
-    const newParagraph = document.createElement("p");
-    newParagraph.innerText =
-      "You have completed the task Improve Job searching at " + formattedDate;
-
-    newParagraph.style.backgroundColor = "#F4F7FF";
-    newParagraph.style.padding = "12px";
-    newParagraph.style.borderRadius = "16px";
-
-    const parentElement = document.getElementById("activity-log");
-
-    parentElement.appendChild(newParagraph);
-  });
-
+//
 document
   .getElementById("clear-history-btn")
   .addEventListener("click", function () {
