@@ -67,10 +67,7 @@
                     <div class="bg-white p-4 rounded-full">
                         <img src="./assets/calender.png" alt="">
                     </div>
-                    <div>
-                        <p class="text-base font-medium">Wed,</p>
-                        <p class="text-xl font-bold">Feb 28 2025</p>
-                    </div>
+                    <div id="dateDisplay" class="font-semibold"></div>
                 </div>
             </section>
             <!-- main content section -->
@@ -183,7 +180,7 @@
                 <!-- card-6 -->
                 <div class="bg-[#F4F7FF] p-6 rounded-xl">
                     <div class="border-b-2 border-dashed pb-4">
-                        <span class="bg-white py-2 px-4 rounded-lg text-base">Glassdoar</span>
+                        <span class="bg-white py-2 px-4 rounded-lg text-base">GlassDoor</span>
                         <h3 class="my-4 text-2xl font-medium">Improve Job searching</h3>
                         <p class="bg-white p-4 rounded-lg text-base">
                             Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
@@ -220,6 +217,16 @@
     <!-- external javascript file -->
     <script src="./jScript/script.js"></script>
     <script src="./jScript/activity.js"></script>
+    <script>
+        function formatDate() {
+            const today = new Date();
+            const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options).replace(',', '');
+            document.getElementById('dateDisplay').innerHTML = formattedDate;
+        }
+
+        formatDate();
+    </script>
 </body>
 
 </html>
