@@ -27,3 +27,7 @@ document.querySelectorAll(".complete-btn").forEach((btn) => {
     }
   });
 });
+
+document.getElementById("blog-btn").addEventListener("click", function () {
+  window.location.href = "../blog.html";
+});

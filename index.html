@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dev Board</title>
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google fonts -->
@@ -18,14 +18,15 @@
             font-family: "Poppins", sans-serif;
         }
 
-        header {
+        header,
+        main {
             max-width: 1536px;
         }
     </style>
 </head>
 
 <body class="bg-[#F4F7FF] p-6 pb-16">
-    <header class="bg-white p-6 rounded-2xl">
+    <header class="mx-auto bg-white p-6 rounded-2xl">
         <nav class="flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="./assets/logo.png" alt="">
@@ -42,7 +43,7 @@
             </div>
         </nav>
     </header>
-    <main class="mt-5 grid grid-cols-4 gap-6">
+    <main class="mx-auto mt-5 grid grid-cols-4 gap-6">
         <section class="bg-white rounded-2xl col-span-3">
             <!-- top content section -->
             <section class="grid grid-cols-4 gap-6 p-6 border-b-2 border-dashed">
@@ -55,8 +56,8 @@
                         <p id="remaining-task" class="text-3xl font-bold">06</p>
                     </div>
                 </div>
-                <div
-                    class="bg-gradient-to-tr from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl py-6 px-10 col-span-2">
+                <div id="blog-btn"
+                    class="cursor-pointer bg-gradient-to-tr from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl py-6 px-10 col-span-2">
                     <div class="flex items-center gap-6">
                         <img src="./assets/board.png" alt="">
                         <p class="text-2xl font-medium text-white">Discover Something New Today!</p>
